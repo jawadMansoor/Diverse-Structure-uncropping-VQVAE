@@ -18,12 +18,6 @@ This repository is for the CVPR 2021 paper, "Generating Diverse Structure for Im
 *Results on the Places2 validation set using the center-mask Places2 model.*
 </div>
 
-## CelebA-HQ Results
-<div align=center>
-<img src="./celebahq_random.png">
-
-*Results on one CelebA-HQ test image with different holes using the random-mask CelebA-HQ model.*
-</div>
 
 ## Installation
 This code was tested with TensorFlow 1.12.0 (later versions may work, excluding 2.x), CUDA 9.0, Python 3.6 and Ubuntu 16.04

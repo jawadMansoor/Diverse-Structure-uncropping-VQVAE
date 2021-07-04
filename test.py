@@ -194,8 +194,12 @@ with tf.Session(config=tf.ConfigProto(allow_soft_placement=True)) as sess:
  
     for i in range(args.test_num):
         begin = time.time()
-        img_name = img_list[i]
-        mask_name = mask_list[i]
+        if test_num==1:
+            img_name = img_list
+            mask_name = mask_list
+        else:
+            img_name = img_list[i]
+            mask_name = mask_list[i]
         img_np = cv2.imread(img_name)[:,:,::-1].astype(np.float)
         img_np = cv2.resize(img_np, (args.image_size, args.image_size), interpolation=cv2.INTER_LINEAR)
         mask_np = cv2.imread(mask_name, cv2.IMREAD_GRAYSCALE).astype(np.float)

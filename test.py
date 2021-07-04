@@ -194,7 +194,7 @@ with tf.Session(config=tf.ConfigProto(allow_soft_placement=True)) as sess:
  
     for i in range(args.test_num):
         begin = time.time()
-        if test_num==1:
+        if args.test_num==1:
             img_name = img_list
             mask_name = mask_list
         else:
